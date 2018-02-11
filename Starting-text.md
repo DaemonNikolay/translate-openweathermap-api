@@ -226,59 +226,59 @@ We provide number of bulk files with current weather and forecasts. More informa
 
 *Parameters:*
 
-* location
-    * location.name City ID
-    * location.type Prototype parameter
-    * location.country Country code (GB, JP etc.)
-    * location.timezone Prototype parameter
-    * location.location
-        * location.location.altitude City geo location, altitude above the sea level
-        * location.location.latitude City geo location, latitude
-        * location.location.longitude City geo location, longitude
-        * location.location.geobase Prototype parameter
-        * location.location.geobaseid Prototype parameter
-* meta
-    * meta.lastupdate Prototype parameter
-    * meta.calctime Speed of data calculation
-    * meta.nextupdate Prototype parameter
-* sun
-    * sun.rise Sunrise time
-    * sun.set Sunset time
-* forecast
-    * forecast.time
-        * forecast.time.day Date of weather data forecasted
-    * forecast.symbol
-        * forecast.symbol.number Weather condition id
-        * forecast.symbol.name Weather condition
-        * forecast.symbol.var Weather icon id
-    * forecast.precipitation
-        * forecast.precipitation.value Precipitation volume for the last 3 hours, mm
-        * forecast.precipitation.unit Period of measurements. Possilbe value is 1 hour, 3 hours.
-        * forecast.precipitation.type Type of precipitation. Possible value is rain, snow.
+* `location`
+    * `location.name` City ID
+    * `location.type` Prototype parameter
+    * `location.country` Country code (GB, JP etc.)
+    * `location.timezone` Prototype parameter
+    * `location.location`
+        * `location.location.altitude` City geo location, altitude above the sea level
+        * `location.location.latitude` City geo location, latitude
+        * `location.location.longitude` City geo location, longitude
+        * `location.location.geobase` Prototype parameter
+        * `location.location.geobaseid` Prototype parameter
+* `meta`
+    * `meta.lastupdate` Prototype parameter
+    * `meta.calctime` Speed of data calculation
+    * `meta.nextupdate` Prototype parameter
+* `sun`
+    * `sun.rise` Sunrise time
+    * `sun.set` Sunset time
+* `forecast`
+    * `forecast.time`
+        * `forecast.time.day` Date of weather data forecasted
+    * `forecast.symbol`
+        * `forecast.symbol.number` Weather condition id
+        * `forecast.symbol.name` Weather condition
+        * `forecast.symbol.var` Weather icon id
+    * `forecast.precipitation`
+        * `forecast.precipitation.value` Precipitation volume for the last 3 hours, mm
+        * `forecast.precipitation.unit` Period of measurements. Possilbe value is 1 hour, 3 hours.
+        * `forecast.precipitation.type` Type of precipitation. Possible value is rain, snow.
     * forecast.windDirection
-        * forecast.windDirection.deg Wind direction, degrees (meteorological)
-        * forecast.windDirection.code Code of the wind direction. Possilbe value is WSW, N, S etc.
-        * forecast.windDirection.name Full name of the wind direction.
+        * `forecast.windDirection.deg` Wind direction, degrees (meteorological)
+        * `forecast.windDirection.code` Code of the wind direction. Possilbe value is WSW, N, S etc.
+        * `forecast.windDirection.name` Full name of the wind direction.
     * forecast.windSpeed
-        * forecast.windSpeed.mps Wind speed, mps
-        * forecast.windSpeed.name Type of the wind
-    * forecast.temperature
-        * forecast.temperature.day Day temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-        * forecast.temperature.min Min daily temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-        * forecast.temperature.max Max daily temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-        * forecast.temperature.night Night temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-        * forecast.temperature.eve Evening temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-        * forecast.temperature.morn Morning temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-    * forecast.pressure
-        * forecast.pressure.unit hPa
-        * forecast.pressure.value Pressure value
-    * forecast.humidity
-        * forecast.humidity.unit %
-        * forecast.humidity.value Humidity value
-    * forecast.clouds
-        * forecast.pressure.value Name of the cloudiness
-        * forecast.pressure.all Cloudiness
-        * forecast.pressure.unit %
+        * `forecast.windSpeed.mps` Wind speed, mps
+        * `forecast.windSpeed.name` Type of the wind
+    * `forecast.temperature`
+        * `forecast.temperature.day` Day temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+        * `forecast.temperature.min` Min daily temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+        * `forecast.temperature.max` Max daily temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+        * `forecast.temperature.night` Night temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+        * `forecast.temperature.eve` Evening temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+        * `forecast.temperature.morn` Morning temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+    * `forecast.pressure`
+        * `forecast.pressure.unit` hPa
+        * `forecast.pressure.value` Pressure value
+    * `forecast.humidity`
+        * `forecast.humidity.unit` %
+        * `forecast.humidity.value` Humidity value
+    * `forecast.clouds`
+        * `forecast.pressure.value` Name of the cloudiness
+        * `forecast.pressure.all` Cloudiness
+        * `forecast.pressure.unit` %
 
 ### List of condition codes
 
