@@ -190,7 +190,7 @@ We provide number of bulk files with current weather and forecasts. More informa
 
 ### XML
 
-*Example of API repond:*
+*Example of API respond:*
 
 ```XML
 <weatherdata>
@@ -254,11 +254,11 @@ We provide number of bulk files with current weather and forecasts. More informa
         * `forecast.precipitation.value` Precipitation volume for the last 3 hours, mm
         * `forecast.precipitation.unit` Period of measurements. Possilbe value is 1 hour, 3 hours.
         * `forecast.precipitation.type` Type of precipitation. Possible value is rain, snow.
-    * forecast.windDirection
+    * `forecast.windDirection`
         * `forecast.windDirection.deg` Wind direction, degrees (meteorological)
         * `forecast.windDirection.code` Code of the wind direction. Possilbe value is WSW, N, S etc.
         * `forecast.windDirection.name` Full name of the wind direction.
-    * forecast.windSpeed
+    * `forecast.windSpeed`
         * `forecast.windSpeed.mps` Wind speed, mps
         * `forecast.windSpeed.name` Type of the wind
     * `forecast.temperature`
