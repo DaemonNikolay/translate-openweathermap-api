@@ -226,32 +226,32 @@
 *Параметры:*
 
 * `location`
-    * `location.name` 
-    * `location.type` 
-    * `location.country` 
-    * `location.timezone` 
+    * `location.name` id города
+    * `location.type` Параметр прототипа
+    * `location.country` Код страны (GB, JP и тд.)
+    * `location.timezone` Параметр прототипа
     * `location.location`
-        * `location.location.altitude` 
-        * `location.location.latitude` 
-        * `location.location.longitude` 
-        * `location.location.geobase` 
-        * `location.location.geobaseid` 
+        * `location.location.altitude` Геолокация города, высота выше уровня моря
+        * `location.location.latitude` Геолокация города, широта
+        * `location.location.longitude` Геолокация города, долгота
+        * `location.location.geobase` Параметр прототипа 
+        * `location.location.geobaseid` Параметр прототипа
 * `meta`
-    * `meta.lastupdate` 
-    * `meta.calctime` 
-    * `meta.nextupdate` 
+    * `meta.lastupdate` Параметр прототипа
+    * `meta.calctime` Скорость вычисления информации
+    * `meta.nextupdate` Параметр прототипа
 * `sun`
-    * `sun.rise` 
-    * `sun.set` 
+    * `sun.rise` Восход солнца
+    * `sun.set` Заход солнца
 * `forecast`
     * `forecast.time`
-        * `forecast.time.day` 
-    * `forecast.symbol`
-        * `forecast.symbol.number` 
-        * `forecast.symbol.name`
-        * `forecast.symbol.var` 
+        * `forecast.time.day` Дата прогнозирования информации о погоде
+    * `forecast.symbol` 
+        * `forecast.symbol.number` id состояния погоды
+        * `forecast.symbol.name` Состояние погоды
+        * `forecast.symbol.var` id иконки погоды
     * `forecast.precipitation`
-        * `forecast.precipitation.value` 
+        * `forecast.precipitation.value` Падение уровня за 3 часа, мм
         * `forecast.precipitation.unit` 
         * `forecast.precipitation.type` 
     * `forecast.windDirection`
