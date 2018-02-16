@@ -32,3 +32,65 @@
 
 ### По id города
 
+*Описание:*
+
+Вы можете получить 16-ти дневный прогноз с ежедневными средними параметрами по id города. API ответ с точным результатом. Вся информация о погоде получается в JSON и XML форматах.
+
+Список id городов (файл city.list.json.gz *прим. переводчика*) можно скачать здесь [http://bulk.openweathermap.org/sample/](http://bulk.openweathermap.org/sample/)
+
+> Мы рекоммендуем вызов API по id города для возврата недвусмысленного результата для Вашего города.
+
+*API вызов:*
+
+`api.openweathermap.org/data/2.5/forecast/daily?id={city ID}&cnt={cnt}`
+
+*Параметры:*
+
+**id** id города
+
+**cnt** сумма возвращаемых дней (от 1 до 16)
+
+*Пример вызова API:*
+[`api.openweathermap.org/data/2.5/forecast/daily?id=524901`](http://samples.openweathermap.org/data/2.5/forecast/daily?id=524901&lang=zh_cn&appid=b1b15e88fa797225412429c1c50c122a1)
+
+### По географическим координатам
+
+*Описание:*
+
+Вы можете получить 16-ти дневный прогноз погоды с ежедневными средними параметрами по географическим координатам. Вся информация о погоде получается в JSON и XML форматах.
+
+*API вызов:*
+
+`api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}`
+
+*Параметры:*
+
+**lat**, **lon** координаты локации или Ваших интересов
+
+**cnt** количество возвращаемых дней (от 1 до 16)
+
+*Пример вызова API:*
+
+Вызов 10-ти дневного прогноза по географическим координатам `api.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10`
+
+### По ZIP коду
+
+*Описание:*
+
+Обратите внимание, если страна не указана, то используется поиск для США по умолчанию.
+
+*API вызов:*
+
+`api.openweathermap.org/data/2.5/forecast/daily?zip={zip code},{country code}`
+
+*Параметры:*
+
+**ZIP** zip код
+
+*Пример вызова API:*
+
+`api.openweathermap.org/data/2.5/forecast/daily?zip=94040,us`
+
+***
+
+## Масса скачиваний

@@ -12,7 +12,7 @@
 
 *Description:*
 
-You can search 16 day weather forecast with daily average parameters by city name. All weather data can be obtained in JSON and XML formats.
+You can seach 16 day weather forecast with daily average parameters by city name. All weather data can be obtained in JSON and XML formats.
 
 > There is a possibility to receive a central district of the city/town with its own parameters (geographic coordinates/id/name) in API response. [Example](http://samples.openweathermap.org/data/2.5/forecast/daily?q=M%C3%BCnchen,DE&appid=b6907d289e10d714a6e88b30761fae22 "Example")
 
@@ -51,7 +51,6 @@ List of city ID city.list.json.gz can be downloaded here [http://bulk.openweathe
 **cnt** number of days returned (from 1 to 16)
 
 *Examples of API calls:*
-
 [`api.openweathermap.org/data/2.5/forecast/daily?id=524901`](http://samples.openweathermap.org/data/2.5/forecast/daily?id=524901&lang=zh_cn&appid=b1b15e88fa797225412429c1c50c122a1)
 
 ### By geographic coordinats
