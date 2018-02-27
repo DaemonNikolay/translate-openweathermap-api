@@ -285,7 +285,7 @@ List of [weather condition codes](http://openweathermap.org/weather-conditions) 
 
 ### Min/max temperature in current weather API and forecast API
 
-> Please, do not confuse min/max parameters in current weather API and forecast API. In current weather API **temp_min** and **temp_max** are optional parameters mean min / max temperature in the city at the current moment to see deviation from current temp just for your reference. For large cities and megalopolises geographically expanded it might be applicable. In most cases both temp_min and temp_max parameters have the same volume as 'temp'. Please, use **temp_min** and **temp_max** parameters in current weather API optionally.
+> Please, do not confuse min/max parameters in current weather API and forecast API. In current weather API **temp_min** and **temp_max** are optional parameters mean min / max temperature in the city at the current moment to see deviation from current temp just for your reference. For large cities and megalopolises geographically expanded it might be applicable. In most cases both **temp_min** and **temp_max** parameters have the same volume as 'temp'. Please, use **temp_min** and **temp_max** parameters in current weather API optionally.
 
 *Example of current weather API respond:*
 ```JSON
@@ -317,11 +317,11 @@ List of [weather condition codes](http://openweathermap.org/weather-conditions) 
 
 *Description:*
 
-JSON format is used by default. To get data in XML format just set up mode = xml.
+JSON format is used by default. To get data in XML format just set up `mode = xml`.
 
 *Parameters:*
 
-mode - possible values are JSON xml. If mode parameter is empty the format is JSON by default.
+`mode` - possible values are JSON xml. If `mode` parameter is empty the format is JSON by default.
 
 *Examples of API calls:*
 

@@ -252,29 +252,84 @@
         * `forecast.symbol.var` id иконки погоды
     * `forecast.precipitation`
         * `forecast.precipitation.value` Падение уровня за 3 часа, мм
-        * `forecast.precipitation.unit` 
-        * `forecast.precipitation.type` 
+        * `forecast.precipitation.unit` Период измерений. Вероятное значение 1 час, 3 часа.
+        * `forecast.precipitation.type` Тип осадков. Возможное значение дождь, снег.
     * `forecast.windDirection`
-        * `forecast.windDirection.deg` 
-        * `forecast.windDirection.code` 
-        * `forecast.windDirection.name` 
+        * `forecast.windDirection.deg` Направление ветра, градус (метеорологический) 
+        * `forecast.windDirection.code` Код направления ветра. Возможное значение WSW, N, S и тд.
+        * `forecast.windDirection.name` Полное наименование направления ветра. 
     * `forecast.windSpeed`
-        * `forecast.windSpeed.mps`
-        * `forecast.windSpeed.name`
+        * `forecast.windSpeed.mps` Скорость ветра, mps.
+        * `forecast.windSpeed.name` Тип ветра.
     * `forecast.temperature`
-        * `forecast.temperature.day` 
-        * `forecast.temperature.min` 
-        * `forecast.temperature.max` 
-        * `forecast.temperature.night` 
-        * `forecast.temperature.eve` 
-        * `forecast.temperature.morn`
+        * `forecast.temperature.day` Дневная температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
+        * `forecast.temperature.min` Минимальная дневная температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
+        * `forecast.temperature.max` Максимальная дневная температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
+        * `forecast.temperature.night` Ночная температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
+        * `forecast.temperature.eve` Вечерняя температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
+        * `forecast.temperature.morn` Утренняя температура. Единица измерения по умолчанию: Кельвин, метрическая: Цельсий, Империческая: Фаренгейт.
     * `forecast.pressure`
-        * `forecast.pressure.unit` 
-        * `forecast.pressure.value` 
+        * `forecast.pressure.unit` гПа
+        * `forecast.pressure.value` Значение давления
     * `forecast.humidity`
-        * `forecast.humidity.unit` 
-        * `forecast.humidity.value` 
+        * `forecast.humidity.unit` %
+        * `forecast.humidity.value` Значение влажности
     * `forecast.clouds`
-        * `forecast.pressure.value`
-        * `forecast.pressure.all` 
-        * `forecast.pressure.unit` 
+        * `forecast.pressure.value` Наименование облачности
+        * `forecast.pressure.all` Облачность
+        * `forecast.pressure.unit` %
+
+### Список кодов состояния
+
+Список [погодные коды состояния](http://openweathermap.org/weather-conditions) с иконками (грозовой фронт, мелкий дождь, дождь, снег, облака, включённые атмосферные условия, такие как торнадо, ураган и тд.)
+
+### API Мин/макс текущей температуры погоды и прогнозный API
+
+> Пожалуйста, не путайте параметры мин/макс в API текущей погоде и прогнозном API. В API текущей погоды **temp_min** и **temp_max** опциональные параметры означают мин/макс температуру в городе на текущий момент с учётом отклонений текущей температуры, только для Вашей справки. Для больших городов и, географически расширенных, мегаполисов это может быть применимо. Наибольшее значение параметров **temp_min** и **temp_max** содержится в 'temp'. Пожалуйста, используйте параметры **temp_min** и **temp_max** в API текущей погоды опционально.
+
+*Пример ответа API текущей погоды:*
+```JSON
+"main":{
+"temp":306.15, //текущая температура 
+"pressure":1013,
+"humidity":44,
+"temp_min":306, //минимальная температура в городе
+"temp_max":306 //максимальная температура в городе
+},
+```
+*Для сравнения приведён пример каждодневного ответа API прогноза погоды:*
+```JSON
+"dt":1406080800,
+"temp":{
+        "day":297.77,  //каждодневная средняя температура 
+        "min":293.52, //каждодневная минимальная температура
+        "max":297.77, //каждодневная максимальная температура
+        "night":293.52, //ночная температура
+        "eve":297.77, //вечерняя температура
+        "morn":297.77}, //утренняя температура
+```
+
+***
+
+## Другие особенности
+
+**Формат**
+
+*Описание:*
+
+JSON формат используется по умолчанию. Для получения информации в формате XML просто укажите `mode = xml`.
+
+*Параметры:*
+
+`mode` - возможные значения: JSON, xml. Если параметр `mode` отсутствует, то JSON формат по умолчанию.
+
+*Пример вызова API:*
+
+JSON [api.openweathermap.org/data/2.5/weather?q=London](http://samples.openweathermap.org/data/2.5/weather?q=London&appid=b6907d289e10d714a6e88b30761fae22)
+
+XML [api.openweathermap.org/data/2.5/weather?q=London&mode=xml](http://samples.openweathermap.org/data/2.5/forecast/daily?q=London&mode=xml&units=metric&cnt=7&appid=b1b15e88fa797225412429c1c50c122a1)
+
+### Поисковая точность
+
+*Описание:*
+
